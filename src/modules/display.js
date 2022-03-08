@@ -1,8 +1,8 @@
 const displayAnime = (anime) => {
-    anime.forEach((e, index) => {
-        const myList = document.querySelector('.mainContainer');
-        if (index < 6) {
-            myList.innerHTML += `
+  anime.forEach((e, index) => {
+    const myList = document.querySelector('.mainContainer');
+    if (index < 6) {
+      myList.innerHTML += `
             <div class="allMovies">
               <ul class="movieImages">
                 <img class="sMovie" src="${e.image.medium}" alt="Movie-pic">
@@ -19,8 +19,8 @@ const displayAnime = (anime) => {
               </div>
             </div>
             `;
-        }
-    })
-}
+    }
+  });
+};
 
-export default displayAnime
+export default displayAnime;

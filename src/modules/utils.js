@@ -2,9 +2,9 @@ const involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/c
 const showApi = 'https://api.tvmaze.com/shows';
 
 const fetchShows = async () => {
-    const res = await fetch(showApi);
-    const allShows = await res.json();
-    return allShows;
-}
+  const res = await fetch(showApi);
+  const allShows = await res.json();
+  return allShows;
+};
 
 export { involvementApi, showApi, fetchShows };
