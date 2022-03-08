@@ -6,3 +6,12 @@
   list-style-type: none;
   text-decoration: none;
 }
+
+h1 {
+  font-family: " Lato ", sans-serif;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
