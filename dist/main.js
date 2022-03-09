@@ -116,7 +116,47 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/utils.js */ \"./src/modules/utils.js\");\n/* harmony import */ var _modules_display_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/display.js */ \"./src/modules/display.js\");\n/* harmony import */ var _modules_controlls_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/controlls.js */ \"./src/modules/controlls.js\");\n/* harmony import */ var _modules_comments_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/comments.js */ \"./src/modules/comments.js\");\n\n\n\n\n\n\nconst seePopup = async () => {\n  const commentBtn = document.querySelector('.comment-btn');\n  const animes = await (0,_modules_utils_js__WEBPACK_IMPORTED_MODULE_1__.fetchShows)();\n\n  commentBtn.forEach((btn) => {\n    btn.addEventListener('click', () => {\n      const cardId = btn.parentNode.parentNode.dataset.id;\n      (0,_modules_controlls_js__WEBPACK_IMPORTED_MODULE_3__.displayPopup)();\n      animes.find((anime) => anime.id === cardId);\n      (0,_modules_comments_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(animes.find((anime) => anime.id === cardId));\n\n      const hidePopup = document.querySelector('.close-btn');\n      hidePopup.addEventListener('click', _modules_controlls_js__WEBPACK_IMPORTED_MODULE_3__.closePopup);\n    });\n  });\n};\n\nconst gen = async () => {\n  const list = await ((0,_modules_utils_js__WEBPACK_IMPORTED_MODULE_1__.fetchShows)());\n  (0,_modules_display_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(list);\n  (0,_modules_comments_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])((0,_modules_utils_js__WEBPACK_IMPORTED_MODULE_1__.fetchShows)());\n  seePopup();\n};\ngen();\n\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/comments.js":
+/*!*********************************!*\
+  !*** ./src/modules/comments.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst showPopup = (anime) => {\n  anime.forEach((e, index) => {\n    const commentPopup = document.querySelector('#popup');\n    if (index < 6) {\n      commentPopup.className = '.comment-popup';\n      commentPopup.innerHTML = `div class=\"shows\">\n                                  <button type=\"button\" class=\"close-btn clickable\">&times;</button>\n                                  <div class=\"shows-image\">\n                                    <img src=\"${e.image.medium}\" alt=\"show-image\">\n                                  </div>\n                                  <div class=\"shows-text\">\n                                    <div class=\"shows-title\">\n                                      <h2>${e.name}</h2>\n                                    </div>\n                                    <div class=\"details\">\n                                      <p>${e.summary}</p>\n                                    </div>\n                                 </div>\n                                 <div class=\"comments\">\n                                   <div class=\"comment-title\">\n                                     <h3>Comments <span class=\"count\">( )</span></h3>\n                                   </div>\n                                  <ul class=\"comments-list\">\n                                    <li class=\"comments-item\"><span>09/03/2022</span><span> Cyndi:</span><span> This movie is amazing</span></li>\n                                    <li class=\"comments-item\"><span>09/03/2022</span><span> Esthy:</span><span> This movie is amazing I would like to watch it again</span></li>\n                                  </ul>\n                                 </div>\n                                 <div class=\"commentInput\">\n                                  <h3 class=\"inputTitle\">Add comments</h3>\n                                  <div class=\"commentsInput\">\n                                    <form class=\"form\">\n                                      <input type=\"text\" class=\"inputText\" placeholder=\"Your name\" required/>\n                                      <textarea name=\"commentInput\" id=\"insights\" cols=\"30\" rows=\"5\" placeholder=\"Your insights\" required></textarea>\n                                    </form>\n                                    <button type=\"submit\" class=\"addComment-btn clickable\">Comments</button>\n                                  </div>\n                                 </div>\n                                </div>`;\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showPopup);\n\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/modules/comments.js?");
+
+/***/ }),
+
+/***/ "./src/modules/controlls.js":
+/*!**********************************!*\
+  !*** ./src/modules/controlls.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"closePopup\": () => (/* binding */ closePopup),\n/* harmony export */   \"displayPopup\": () => (/* binding */ displayPopup)\n/* harmony export */ });\nconst commentPopup = document.querySelector('#popup');\n\nconst header = document.querySelector('#header');\nconst main = document.querySelector('#main');\nconst footer = document.querySelector('#footer');\n\nconst displayPopup = () => {\n  header.style.display = 'none';\n  main.style.display = 'none';\n  footer.style.display = 'none';\n  commentPopup.style.display = 'block';\n};\n\nconst closePopup = () => {\n  header.style.display = 'block';\n  main.style.display = 'block';\n  footer.style.display = 'block';\n  commentPopup.style.display = 'none';\n};\n\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/modules/controlls.js?");
+
+/***/ }),
+
+/***/ "./src/modules/display.js":
+/*!********************************!*\
+  !*** ./src/modules/display.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst displayAnime = (anime) => {\n  anime.forEach((e, index) => {\n    const myList = document.querySelector('.mainContainer');\n    if (index < 6) {\n      myList.innerHTML += `\n            <div class=\"allMovies\">\n              <ul class=\"movieImages\">\n                <img class=\"sMovie\" src=\"${e.image.medium}\" alt=\"Movie-pic\">\n              </ul>\n              <div class=\"movieTitle\">\n                <h3>${e.name}</h3>\n                <div class=\"activity\">\n                  <span><i id=\"${e.id}\" class=\"fa fa-heart-o\"></i></span>\n                  <span id=\"${e.id}\"Likes</span>\n                </div>\n                <div class=\"commentBtn\">\n                  <button class=\"comment-btn\" id=\"${e.id}\">Comments</button>\n                </div>\n              </div>\n            </div>\n            `;\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayAnime);\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/modules/display.js?");
+
+/***/ }),
+
+/***/ "./src/modules/utils.js":
+/*!******************************!*\
+  !*** ./src/modules/utils.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"fetchShows\": () => (/* binding */ fetchShows),\n/* harmony export */   \"involvementApi\": () => (/* binding */ involvementApi),\n/* harmony export */   \"showApi\": () => (/* binding */ showApi)\n/* harmony export */ });\nconst involvementApi = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UA1qh5oDK24p7rhA1W5m';\nconst showApi = 'https://api.tvmaze.com/shows';\n\nconst fetchShows = async () => {\n  const res = await fetch(showApi);\n  const allShows = await res.json();\n  return allShows;\n};\n\n\n\n\n//# sourceURL=webpack://javascript-groupe-capstone/./src/modules/utils.js?");
 
 /***/ })
 
