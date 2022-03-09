@@ -1,7 +1,7 @@
 const displayAnime = (anime) => {
   anime.forEach((e, index) => {
     const myList = document.querySelector('.mainContainer');
-    if (index < 6) {
+    if (index < 8) {
       myList.innerHTML += `
             <div class="allMovies">
               <ul class="movieImages">
