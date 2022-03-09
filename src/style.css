@@ -5,6 +5,7 @@
   padding: 0;
   list-style-type: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -29,7 +30,7 @@ h1 {
   overflow-y: scroll;
 }
 
-.shows {
+.comment-popup .shows {
   position: relative;
   border: 1px solid #8b7e77;
   border-radius: 0.4rem;
@@ -60,7 +61,7 @@ h1 {
 
 .shows-title h2 {
   text-align: center;
-  color: #8b7e77;
+  color: #1d1c1b;
   margin-bottom: 0.5rem;
 }
 
@@ -68,18 +69,19 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #8b7e77;
+  color: #050505;
   text-align: justify;
+  font-size: 16.2px;
 }
 
 .details .comments {
   width: 300px;
-  color: #8b7e77;
+  color: #080808;
 }
 
 .comment-title {
   text-align: center;
-  color: #8b7e77;
+  color: #0f0f0f;
 }
 
 .comments-list {
@@ -94,9 +96,9 @@ h1 {
   flex-direction: column;
 }
 
-.inputTitle h2 {
-  color: #8b7e77;
-  padding: 0.5rem 0 1rem;
+.comment-popup .shows .commentInput h3 {
+  color: #181717;
+  padding: 0.5rem 0 0.6rem;
 }
 
 .commentsInput {
@@ -111,22 +113,23 @@ h1 {
   flex-direction: column;
 }
 
-.inputText textarea {
+.input-name,
+textarea {
   width: 100%;
   padding: 0.4rem;
-  font-size: 1rem;
-  color: #8b7e77;
+  font-size: 0.9rem;
+  color: #080808;
   margin-bottom: 0.5rem;
 }
 
-.add-comment-btn {
+.addComment-btn {
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   text-align: center;
   color: #f9f5f3;
   border-radius: 5px;
   width: 100%;
   background-color: #968b87;
-  box-shadow: 2px 2px 2px #8b7e77;
+  box-shadow: 2px 2px 2px #655a56;
   margin-bottom: 1rem;
 }

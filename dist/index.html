@@ -11,60 +11,76 @@
     />
   <script defer src="main.js"></script></head>
   <body>
-    <header>
-      <div class="logo">
-        <img id="logo" src="./images/logo.png" alt="logo" />
-      </div>
-      <div class="nav">
-        <h1>Watch Anime</h1>
-        <ul class="nav-list">
-          <li><a id="active" class="nav-item" href="#">Series</a></li>
-          <li><a class="nav-item" href="#">Movie</a></li>
-        </ul>
-      </div>
-    </header>
-    <main class="mainContainer"></main>
-    <div class="comment">
-      <h3 class="comment-here">Comments<span class="count"></span></h3>
-    </div>
-    <div class="allComments"></div>
-    <div class="commentInput">
-      <h3 class="inputTitle">Add comments</h3>
-      <div class="commentsInput">
-        <input type="text" class="inputText" placeholder="Your name" required />
-        <textarea
-          class="insights"
-          id="insights"
-          cols="30"
-          rows="10"
-          placeholder="Your insights"
-          required
-        ></textarea>
-        <button class="addComment" type="button">Comment</button>
-      </div>
-    </div>
-
-    <footer id="footer" class="footer">
-      <div class="footer-container">
-        <div class="footer-text">
-          <span>Created By</span>
-          <a
-            class="clickable author"
-            href="https://github.com/cynthiainga"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Cynthia Inga</a
-          >
-          <span>And</span>
-          <a
-            class="clickable author"
-            href="https://github.com/iLynette"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Lynette Acholah</a
-          >
+    <div id="popup"></div>
+    <div class="container">
+      <header id="header">
+        <div class="logo"></div>
+        <div class="nav">
+          <ul class="nav-list">
+            <li><a id="active" class="nav-item" href="#">Series</a></li>
+            <li><a class="nav-item" href="#">Movie</a></li>
+          </ul>
         </div>
-      </div>
-    </footer>
+      </header>
+      <main id="main" class="mainContainer">
+        <section id="animes">
+          <h1>Watch Anime</h1>
+          <div class="allMovies"></div>
+          <!-- <div class="comments">
+            <div class="comment-title">
+              <h3>Comments<span class="count">( )</span></h3>
+            </div>
+            <ul class="comments-list"></ul>
+          </div>
+          <div class="commentInput">
+            <h3 class="inputTitle">Add comments</h3>
+            <div class="commentsInput">
+              <form class="form">
+                <input
+                  type="text"
+                  class="inputText"
+                  placeholder="Your name"
+                  required
+                />
+                <textarea
+                  name="commentInput"
+                  id="insights"
+                  cols="30"
+                  rows="5"
+                  placeholder="Your insights"
+                  required
+                ></textarea>
+              </form> -->
+              <!-- <button type="submit" class="addComment-btn clickable">
+                Comments
+              </button>
+            </div>
+          </div> -->
+        </section>
+      </main>
+
+      <footer id="footer" class="footer">
+        <div class="footer-container">
+          <div class="footer-text">
+            <span>Created By</span>
+            <a
+              class="clickable author"
+              href="https://github.com/cynthiainga"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Cynthia Inga</a
+            >
+            <span>And</span>
+            <a
+              class="clickable author"
+              href="https://github.com/iLynette"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lynette Acholah</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
