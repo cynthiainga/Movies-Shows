@@ -68,3 +68,21 @@ img {
   margin: 20px;
   padding-left: 20px;
 }
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.comment-btn {
+  display: flex;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.commentInput {
+  display: none;
+}
