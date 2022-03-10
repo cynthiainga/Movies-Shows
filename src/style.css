@@ -6,6 +6,7 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -85,4 +86,121 @@ img {
 
 .commentInput {
   display: none;
+}
+
+.comment-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  margin: 0.5rem auto;
+  display: none;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.comment-popup .shows {
+  position: relative;
+  border: 1px solid #8b7e77;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shows .close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  color: #8b7e77;
+}
+
+.shows-image {
+  margin-top: 1.6rem;
+}
+
+.shows-text {
+  margin: 1rem 0;
+  width: 80%;
+}
+
+.shows-title h2 {
+  text-align: center;
+  color: #1d1c1b;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #050505;
+  text-align: justify;
+  font-size: 16.2px;
+}
+
+.details .comments {
+  width: 300px;
+  color: #080808;
+}
+
+.comment-title {
+  text-align: center;
+  color: #0f0f0f;
+}
+
+.comments-list {
+  margin: 10px auto;
+  padding-left: 1.3rem;
+}
+
+.commentInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-popup .shows .commentInput h3 {
+  color: #181717;
+  padding: 0.5rem 0 0.6rem;
+}
+
+.commentsInput {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-name,
+textarea {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  color: #080808;
+  margin-bottom: 0.5rem;
+}
+
+.addComment-btn {
+  padding: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #f9f5f3;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #968b87;
+  box-shadow: 2px 2px 2px #655a56;
+  margin-bottom: 1rem;
 }

@@ -9,5 +9,5 @@ const fetchShows = async () => {
 };
 
 export {
-  involvementApi, showApi, fetchShows, logo,
+
 };
