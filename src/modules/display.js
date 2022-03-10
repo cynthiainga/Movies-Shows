@@ -1,3 +1,5 @@
+import { updateLikes } from './likes.js';
+
 const displayAnime = (anime) => {
   anime.forEach((e, index) => {
     const myList = document.querySelector('.mainContainer');
@@ -11,8 +13,11 @@ const displayAnime = (anime) => {
                 
                 <div class="activity">
                   <h3>${e.name}</h3>
-                  <span><i id="${e.id}" class="fa fa-heart-o"></i></span>
-                  <span id="${e.id}">Likes</span>
+                  <span class="like-container">
+                    <span><i id="${e.id}" class="fa fa-heart-o"></i></span>
+                    <input type="number" id="${e.id}" class="countLikes" value="" name=""
+                    <span id="${e.id}">Likes</span>
+                  </span>
                 </div> 
                 <div class="commentBtn">
                   <button class="comment-btn" id="${e.id}">Comments</button>
@@ -21,6 +26,12 @@ const displayAnime = (anime) => {
             </div>
             `;
     }
+  });
+
+  const count = document.querySelectorAll('.countLikes');
+  count.forEach((e, index) => {
+    const countLike = index + 1;
+    updateLikes(countLike, e);
   });
 };
 

@@ -6,7 +6,6 @@
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-  box-sizing: border-box;
 }
 
 body {
@@ -64,6 +63,13 @@ h1 {
   justify-content: center;
 }
 
+.countLikes {
+  pointer-events: none;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
 img {
   width: 90%;
   margin: 20px;
@@ -82,10 +88,6 @@ img {
   display: flex;
   padding: 10px;
   margin-left: 40px;
-}
-
-.commentInput {
-  display: none;
 }
 
 .comment-popup {
