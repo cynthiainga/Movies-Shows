@@ -1,4 +1,5 @@
-import { updateLikes } from "./likes";
+import { updateLikes } from './likes.js';
+
 const displayAnime = (anime) => {
   anime.forEach((e, index) => {
     const myList = document.querySelector('.mainContainer');
@@ -30,8 +31,8 @@ const displayAnime = (anime) => {
   const count = document.querySelectorAll('.countLikes');
   count.forEach((e, index) => {
     const countLike = index + 1;
-    updateLikes(countLike,e)
-  })
+    updateLikes(countLike, e);
+  });
 };
 
 export default displayAnime;

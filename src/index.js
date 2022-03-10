@@ -3,7 +3,7 @@ import { fetchShows, itemContainer } from './modules/utils.js';
 import displayAnime from './modules/display.js';
 import { closePopup, displayPopup } from './modules/controlls.js';
 import showPopup from './modules/comments.js';
-import { postLikes, updateLikes } from './modules/likes';
+import { postLikes, updateLikes } from './modules/likes.js';
 
 const seePopup = (array) => {
   const commentBtn = document.querySelectorAll('.comment-btn');
@@ -28,9 +28,9 @@ gen();
 itemContainer.addEventListener('click', async (e) => {
   if (e.target.className === 'fa fa-heart-o') {
     const string = e.target.id;
-    const id = parseInt(string);
+    const id = parseInt(string, 10);
     await postLikes(id);
     const container = e.target.parentElement.nextElementSibling;
-    await updateLikes(id, container)
+    await updateLikes(id, container);
   }
-})
+});
