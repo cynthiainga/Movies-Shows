@@ -3,18 +3,89 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 100px 0 100px;
+}
+
+.myLogo {
+  width: 80px;
 }
 
 h1 {
   font-family: " Lato ", sans-serif;
 }
 
-.logo img {
-  height: 100%;
-  width: 100%;
+.nav {
+  display: flex;
+}
+
+.nav h2 {
+  font-size: 30px;
+}
+
+.nav-list {
+  display: flex;
+  padding-top: 10px;
+}
+
+.nav-item {
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#active {
+  color: red;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+img {
+  width: 90%;
+  margin: 20px;
+  padding-left: 20px;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.comment-btn {
+  display: flex;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.commentInput {
+  display: none;
 }
 
 .comment-popup {
