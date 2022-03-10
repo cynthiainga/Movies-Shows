@@ -4,6 +4,7 @@ import displayAnime from './modules/display.js';
 import { closePopup, displayPopup } from './modules/controlls.js';
 import showPopup from './modules/comments.js';
 import { postLikes, updateLikes } from './modules/likes.js';
+import { sendComment, getComment } from './modules/involvementApi.js';
 
 const seePopup = (array) => {
   const commentBtn = document.querySelectorAll('.comment-btn');
@@ -14,6 +15,21 @@ const seePopup = (array) => {
       showPopup(array[itemId - 1]);
       const hidePopup = document.querySelector('.close-btn');
       hidePopup.addEventListener('click', closePopup);
+
+      const form = document.querySelector('.form');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputName = document.querySelector('.input-name');
+        const inputComment = document.querySelector('.input-text');
+        const newComment = {
+          item_id: itemId - 1,
+          username: inputName.value,
+          comment: inputComment.value,
+        };
+        sendComment(newComment);
+        getComment(itemId - 1);
+        form.reset();
+      });
     });
   });
 };

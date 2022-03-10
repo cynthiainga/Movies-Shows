@@ -91,6 +91,7 @@ img {
 }
 
 .comment-popup {
+  z-index: 1;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -105,12 +106,16 @@ img {
 
 .comment-popup .shows {
   position: relative;
-  border: 1px solid #8b7e77;
+  border: 3px solid #f1efee;
   border-radius: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url('./images/movie-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .shows .close-btn {
@@ -120,7 +125,7 @@ img {
   background: none;
   font-size: 2rem;
   border: none;
-  color: #8b7e77;
+  color: #dfd7d2;
 }
 
 .shows-image {
@@ -134,7 +139,7 @@ img {
 
 .shows-title h2 {
   text-align: center;
-  color: #1d1c1b;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
@@ -142,19 +147,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #050505;
+  color: #e7e5e5;
   text-align: justify;
-  font-size: 16.2px;
+  font-size: 17px;
 }
 
-.details .comments {
-  width: 300px;
-  color: #080808;
+.comments {
+  width: 500px;
+  color: #fff;
 }
 
 .comment-title {
   text-align: center;
-  color: #0f0f0f;
+  color: #f8f8f8;
 }
 
 .comments-list {
@@ -170,7 +175,7 @@ img {
 }
 
 .comment-popup .shows .commentInput h3 {
-  color: #181717;
+  color: #f8f8f8;
   padding: 0.5rem 0 0.6rem;
 }
 
@@ -199,10 +204,10 @@ textarea {
   padding: 1rem;
   font-size: 0.7rem;
   text-align: center;
-  color: #f9f5f3;
+  color: #fff;
   border-radius: 5px;
   width: 100%;
-  background-color: #968b87;
-  box-shadow: 2px 2px 2px #655a56;
+  background-color: #807b7a;
+  box-shadow: 2px 2px 2px #f1efee;
   margin-bottom: 1rem;
 }
