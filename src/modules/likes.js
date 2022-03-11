@@ -26,3 +26,17 @@ export const updateLikes = async (id, display) => {
     }
   });
 };
+
+export function countShows() {
+  const showContainer = document.querySelector('.mainContainer');
+  const number = showContainer.childElementCount;
+  return number;
+}
+
+export const countShowList = () => {
+  const showContainer = document.querySelector('.mainContainer');
+  const showsList = document.querySelector('.num');
+  const child = showContainer.childElementCount;
+  showsList.textContent = `${countShows()}`;
+  return child;
+};

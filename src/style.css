@@ -25,7 +25,8 @@ header {
 }
 
 .myLogo {
-  width: 80px;
+  width: 90px;
+  border-radius: 30%;
 }
 
 h1 {
