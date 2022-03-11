@@ -14,6 +14,8 @@ const seePopup = (array) => {
       const itemname = btn.getAttribute('itemname');
       displayPopup();
       await showPopup(array[itemId - 1], getComment);
+      const hidePopup = document.querySelector('.close-btn');
+      hidePopup.addEventListener('click', closePopup);
 
       const form = document.querySelector('.form');
       form.addEventListener('submit', async (e) => {
@@ -28,7 +30,6 @@ const seePopup = (array) => {
         await sendComment(newComment);
         await showPopup(array[itemId - 1], getComment);
         form.reset();
-
         const hidePopup = document.querySelector('.close-btn');
         hidePopup.addEventListener('click', closePopup);
       });
