@@ -1,4 +1,4 @@
-import { updateLikes } from './likes.js';
+import { updateLikes, countShowList } from './likes.js';
 
 const displayAnime = (anime) => {
   anime.forEach((e, index) => {
@@ -27,6 +27,8 @@ const displayAnime = (anime) => {
             `;
     }
   });
+
+  countShowList();
 
   const count = document.querySelectorAll('.countLikes');
   count.forEach((e, index) => {
