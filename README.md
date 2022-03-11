@@ -9,7 +9,8 @@
 - JavaScript
 - Webpack
 <!-- ## Live Demo -->
-<!-- ## Video Demo -->
+## Video Demo
+https://drive.google.com/file/d/1-GHZpgSlj0FEADFBgaK9evcwuuyqQMBp/view?usp=sharing
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 - clone the repository by running
