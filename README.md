@@ -26,6 +26,7 @@ To get a local copy up and running follow these simple example steps.
 - Javascript
 - WEBPACK
 - Jest
+- Babel
 ### Run tests
 Run the test
 `npm run test`
