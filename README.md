@@ -37,7 +37,7 @@ Run the test
 - LinkedIn: [acholah lynette](https://www.linkedin.com/in/lynette-acholah/)
 
 :bust_in_silhouette: **Author 2: Cynthia Inga**
-GitHub: [@cynthiainga](https://github.com/cynthiainga)
+- GitHub: [@cynthiainga](https://github.com/cynthiainga)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/cynthia-inga7/)
 - Twitter: [@CynthiaInga_C](https://twitter.com/CynthiaInga_C)
 
