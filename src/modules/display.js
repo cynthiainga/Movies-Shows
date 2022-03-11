@@ -20,7 +20,7 @@ const displayAnime = (anime) => {
                   </span>
                 </div> 
                 <div class="commentBtn">
-                  <button class="comment-btn" id="${e.id}">Comments</button>
+                  <button class="comment-btn" id="${e.id}" itemname="${e.name}">Comments</button>
                 </div>
               </div>
             </div>

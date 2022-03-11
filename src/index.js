@@ -9,26 +9,28 @@ import { sendComment, getComment } from './modules/involvementApi.js';
 const seePopup = (array) => {
   const commentBtn = document.querySelectorAll('.comment-btn');
   commentBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       const itemId = btn.id;
+      const itemname = btn.getAttribute('itemname');
       displayPopup();
-      showPopup(array[itemId - 1]);
-      const hidePopup = document.querySelector('.close-btn');
-      hidePopup.addEventListener('click', closePopup);
+      await showPopup(array[itemId - 1], getComment);
 
       const form = document.querySelector('.form');
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const inputName = document.querySelector('.input-name');
         const inputComment = document.querySelector('.input-text');
         const newComment = {
-          item_id: itemId,
+          item_id: itemname,
           username: inputName.value,
           comment: inputComment.value,
         };
-        sendComment(newComment);
-        getComment(itemId);
+        await sendComment(newComment);
+        await showPopup(array[itemId - 1], getComment);
         form.reset();
+
+        const hidePopup = document.querySelector('.close-btn');
+        hidePopup.addEventListener('click', closePopup);
       });
     });
   });
@@ -36,7 +38,7 @@ const seePopup = (array) => {
 
 const gen = async () => {
   const list = await fetchShows();
-  displayAnime(list);
+  await displayAnime(list);
   seePopup(list);
 };
 gen();

@@ -192,8 +192,8 @@ img {
 }
 
 .input-name,
-textarea {
-  width: 100%;
+.input-text {
+  width: 170%;
   padding: 0.4rem;
   font-size: 0.9rem;
   color: #080808;

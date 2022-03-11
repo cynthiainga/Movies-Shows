@@ -6,12 +6,14 @@ export const sendComment = async (newData) => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(newData),
   });
-  return response.text();
+  return response.text;
 };
 
 const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UA1qh5oDK24p7rhA1W5m/comments?item_id=';
 export const getComment = async (id) => {
   const res = await fetch(`${URL}${id}`);
-  const comments = await res.text();
-  return comments;
+  const comments = await res.json();
+  if (comments.error) {
+    return [];
+  } return comments;
 };
