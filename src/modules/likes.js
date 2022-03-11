@@ -39,4 +39,4 @@ export const countShowList = () => {
   const child = showContainer.childElementCount;
   showsList.textContent = `${countShows()}`;
   return child;
-}
+};
