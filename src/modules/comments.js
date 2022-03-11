@@ -1,9 +1,13 @@
-const showPopup = (data) => {
+import commentsCounter from './commentsCounter.js';
+
+const showPopup = async (data, updateComment) => {
+  const comments = await updateComment(data.name);
+  const commentNum = commentsCounter(comments);
   const movieName = data.name;
   const movieImage = data.image.medium;
   const movieSummary = data.summary;
   const commentPopup = document.querySelector('#popup');
-  commentPopup.className = 'comment-popup';
+  commentPopup.classList.add('comment-popup');
   commentPopup.innerHTML = `<div class="shows">
                               <button type="button" class="close-btn clickable">&times;</button>
                               <div class="shows-image">
@@ -19,11 +23,12 @@ const showPopup = (data) => {
                               </div>
                               <div class="comments">
                                 <div class="comment-title">
-                                  <h3>Comments <span class="count">(2)</span></h3>
+                                  <h3>Comments <span>(${commentNum || 0})</span></h3>
                                 </div>
-                                <ul class="comments-list">
-                                  <li class="comments-item"><span>09/03/2022</span><span> Cyndi:</span><span> This movie is amazing</span></li>
-                                  <li class="comments-item"><span>09/03/2022</span><span> Esthy:</span><span> This movie is amazing I would like to watch it again</span></li>
+                                <ul class="comments-list">${comments.map((comment) => `<li class="comment-item">
+    <span class="creation-date">${comment.creation_date}</span>
+    <span class="username"> ${comment.username}:</span>
+    <span class="comment-msg"> ${comment.comment}</span></li>`).join('')}                                  
                                 </ul>
                               </div>
                               <div class="commentInput">
@@ -31,8 +36,8 @@ const showPopup = (data) => {
                                 <div class="commentsInput">
                                   <form class="form">
                                     <input class="input-name" type="text" placeholder="Your name" required>
-                                    <textarea name="commentInput" id="insights" cols="30" rows="4" placeholder="Your insights" required></textarea>
-                                    <button type="submit" class="addComment-btn clickable">Comments</button>
+                                    <textarea class="input-text" type="text" col="30" rows="4" placeholder="Your insights" required></textarea>
+                                    <button type="submit" class="addComment-btn clickable">Add Comment</button>
                                   </form>
                                 </div>
                               </div>

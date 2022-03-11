@@ -4,23 +4,42 @@ import displayAnime from './modules/display.js';
 import { closePopup, displayPopup } from './modules/controlls.js';
 import showPopup from './modules/comments.js';
 import { postLikes, updateLikes } from './modules/likes.js';
+import { sendComment, getComment } from './modules/involvementApi.js';
 
 const seePopup = (array) => {
   const commentBtn = document.querySelectorAll('.comment-btn');
   commentBtn.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       const itemId = btn.id;
+      const itemname = btn.getAttribute('itemname');
       displayPopup();
-      showPopup(array[itemId - 1]);
+      await showPopup(array[itemId - 1], getComment);
       const hidePopup = document.querySelector('.close-btn');
       hidePopup.addEventListener('click', closePopup);
+
+      const form = document.querySelector('.form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const inputName = document.querySelector('.input-name');
+        const inputComment = document.querySelector('.input-text');
+        const newComment = {
+          item_id: itemname,
+          username: inputName.value,
+          comment: inputComment.value,
+        };
+        await sendComment(newComment);
+        await showPopup(array[itemId - 1], getComment);
+        form.reset();
+        const hidePopup = document.querySelector('.close-btn');
+        hidePopup.addEventListener('click', closePopup);
+      });
     });
   });
 };
 
 const gen = async () => {
   const list = await fetchShows();
-  displayAnime(list);
+  await displayAnime(list);
   seePopup(list);
 };
 gen();
