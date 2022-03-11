@@ -1,3 +1,3 @@
 const countShow = (list) => list.length;
 
-export default countShow
+export default countShow;
