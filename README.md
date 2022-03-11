@@ -34,11 +34,13 @@ Run the test
 :bust_in_silhouette: **Author 1: Acholah Lynette**
 - GitHub: [@iLynette](https://github.com/iLynette)
 - Twitter: [@acholah_lynette](https://twitter.com/acholah_lynette)
-- LinkedIn: [acholah lynette](https://www.linkedin.com/in/lynette-acholah/)tobin-chilongo-a6736415a/)
+- LinkedIn: [acholah lynette](https://www.linkedin.com/in/lynette-acholah/)
+
 :bust_in_silhouette: **Author 2: Cynthia Inga**
 GitHub: [@cynthiainga](https://github.com/cynthiainga)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/cynthia-inga7/)
 - Twitter: [@CynthiaInga_C](https://twitter.com/CynthiaInga_C)
+
 ## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](../../issues/).
