@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 100px 0 100px;
+}
+
+.myLogo {
+  width: 90px;
+  border-radius: 30%;
+}
+
+h1 {
+  font-family: " Lato ", sans-serif;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav h2 {
+  font-size: 30px;
+}
+
+.nav-list {
+  display: flex;
+  padding-top: 10px;
+}
+
+.nav-item {
+  color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#active {
+  color: red;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.countLikes {
+  pointer-events: none;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+img {
+  width: 80%;
+  margin: 16px;
+  border-radius: 5px;
+}
+
+.activity {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.activity h3 {
+  margin-left: -25px;
+}
+
+.allMovies {
+  border: 1.5px solid #fff;
+  border-radius: 0.7rem;
+}
+
+.like-container {
+  width: 25px;
+}
+
+.comment-btn {
+  display: flex;
+  padding: 10px;
+  margin-left: 90px;
+  margin-bottom: 0.9rem;
+  box-shadow: 2px 2px 2px #f1efee;
+  border: 2px solid #0a0a0a;
+  border-radius: 5px;
+}
+
+.comment-popup {
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  margin: 0.5rem auto;
+  display: none;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.comment-popup .shows {
+  position: relative;
+  border: 3px solid #f1efee;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('./images/movie-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.shows .close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  color: #dfd7d2;
+}
+
+.shows-image {
+  margin-top: 1.6rem;
+}
+
+.shows-text {
+  margin: 1rem 0;
+  width: 80%;
+}
+
+.shows-title h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e7e5e5;
+  text-align: justify;
+  font-size: 17px;
+}
+
+.comments {
+  width: 500px;
+  color: #fff;
+}
+
+.comment-title {
+  text-align: center;
+  color: #f8f8f8;
+}
+
+.comments-list {
+  margin: 10px auto;
+  padding-left: 1.3rem;
+}
+
+.commentInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-popup .shows .commentInput h3 {
+  color: #f8f8f8;
+  padding: 0.5rem 0 0.6rem;
+}
+
+.commentsInput {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-name,
+.input-text {
+  width: 170%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  color: #080808;
+  margin-bottom: 0.5rem;
+}
+
+.addComment-btn {
+  padding: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #807b7a;
+  box-shadow: 2px 2px 2px #f1efee;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.footer-container {
+  border-top: 1px solid #fff;
+  color: #b6b2b1;
+  padding: 1rem 0;
+  font-size: 1.15rem;
+}
+
+.footer,
+.footer-tex {
+  text-align: right;
+  padding: 1rem;
+}
+
+.author {
+  font-weight: 700;
+  color: #fff;
+}
+
+.author:hover {
+  font-size: 1.18rem;
+}
