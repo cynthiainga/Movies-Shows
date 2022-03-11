@@ -211,3 +211,30 @@ textarea {
   box-shadow: 2px 2px 2px #f1efee;
   margin-bottom: 1rem;
 }
+
+.footer {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.footer-container {
+  border-top: 1px solid #fff;
+  color: #b6b2b1;
+  padding: 1rem 0;
+  font-size: 1.15rem;
+}
+
+.footer,
+.footer-tex {
+  text-align: right;
+  padding: 1rem;
+}
+
+.author {
+  font-weight: 700;
+  color: #fff;
+}
+
+.author:hover {
+  font-size: 1.18rem;
+}

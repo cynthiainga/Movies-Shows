@@ -2,7 +2,7 @@ import commentsCounter from './commentsCounter.js';
 import { getComment } from './involvementApi.js';
 
 const showPopup = async (data) => {
-  const response = await getComment();
+  const response = await getComment(data.id);
   const comments = JSON.parse(response);
   const commentNum = commentsCounter(comments);
   const movieName = data.name;

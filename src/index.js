@@ -22,12 +22,12 @@ const seePopup = (array) => {
         const inputName = document.querySelector('.input-name');
         const inputComment = document.querySelector('.input-text');
         const newComment = {
-          item_id: itemId - 1,
+          item_id: itemId,
           username: inputName.value,
           comment: inputComment.value,
         };
         sendComment(newComment);
-        getComment(itemId - 1);
+        getComment(itemId);
         form.reset();
       });
     });
