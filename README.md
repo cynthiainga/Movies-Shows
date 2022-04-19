@@ -39,7 +39,7 @@ Run the test
 
 :bust_in_silhouette: **Author 2: Cynthia Inga**
 - GitHub: [@cynthiainga](https://github.com/cynthiainga)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/cynthia-inga7/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/cynthia-inga/)
 - Twitter: [@CynthiaInga_C](https://twitter.com/CynthiaInga_C)
 
 ## :handshake: Contributing
