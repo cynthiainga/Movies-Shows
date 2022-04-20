@@ -13,11 +13,13 @@ const displayAnime = (anime) => {
                 
                 <div class="activity">
                   <h3>${e.name}</h3>
-                  <span class="like-container">
-                    <span><i id="${e.id}" class="fa fa-heart-o"></i></span>
-                    <input type="number" id="${e.id}" class="countLikes" value="" name=""
-                    <span id="${e.id}">Likes</span>
-                  </span>
+                  <div class="like-container">
+                    <span>
+                      <span><i id="${e.id}" class="fa fa-heart-o"></i></span>
+                      <input type="number" id="${e.id}" class="countLikes" value="" name=""
+                      <span id="${e.id}">Likes</span>
+                    </span>
+                  </div>
                 </div> 
                 <div class="commentBtn">
                   <button class="comment-btn" id="${e.id}" itemname="${e.name}">Comments</button>
