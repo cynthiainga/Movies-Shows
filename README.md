@@ -14,9 +14,9 @@ https://drive.google.com/file/d/1-GHZpgSlj0FEADFBgaK9evcwuuyqQMBp/view?usp=shari
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
 - clone the repository by running
-``` git clone https://github.com/cynthiainga/JavaScript-group-capstone.git ```
+``` git clone https://github.com/cynthiainga/Movies-Shows.git ```
 - navigate to the folder
-``` cd JavaScript-group-capstone ```
+``` cd Movies-Show```
 - Install packages
 ``` npm install ```
 - Run the app

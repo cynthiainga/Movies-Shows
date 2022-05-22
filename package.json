@@ -1,5 +1,5 @@
 {
-  "name": "javascript-groupe-capstone",
+  "name": "movies-shows",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cynthiainga/JavaScript-groupe-capstone.git"
+    "url": "git+https://github.com/cynthiainga/Movies-Shows.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cynthiainga/JavaScript-groupe-capstone/issues"
+    "url": "https://github.com/cynthiainga/Movies-Shows/issues"
   },
-  "homepage": "https://github.com/cynthiainga/JavaScript-groupe-capstone#readme",
+  "homepage": "https://github.com/cynthiainga/Movies-Shows#readme",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-modules-commonjs": "^7.16.8",
