@@ -5,7 +5,7 @@ import { closePopup, displayPopup } from './modules/controlls.js';
 import showPopup from './modules/comments.js';
 import { postLikes, updateLikes } from './modules/likes.js';
 import { sendComment, getComment } from './modules/involvementApi.js';
-import myLogo from './images/logo.png';
+import myLogo from './images/logo.jpg';
 
 logo.innerHTML = `<a href='#'><img class='myLogo' src='${myLogo}'></a>`;
 
